@@ -12,8 +12,6 @@ app = FastAPI()
 class TextRequest(BaseModel):
     texts: List[str]
 
-class VertexAIRequest(TextRequest):
-    instances: List[TextRequest]
 
 class PredictionResponse(BaseModel):
     text: str
