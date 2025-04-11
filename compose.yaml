@@ -1,0 +1,11 @@
+services:
+  server:
+    container_name: fastapi_newsstream_model_app
+    build:
+      context: .
+    ports:
+      - "8080:8080"
+    environment:
+      - PYTHONDONTWRITEBYTECODE=1
+      - PYTHONUNBUFFERED=1
+    restart: unless-stopped
